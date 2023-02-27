@@ -44,5 +44,6 @@ public class LoginStepDefinitions {
 
     @Given("user is on the library login page")
     public void userIsOnTheLibraryLoginPage() {
+        System.out.println("User is on the library login page");
     }
 }
