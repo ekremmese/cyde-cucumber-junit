@@ -12,33 +12,33 @@ import io.cucumber.java.BeforeStep;
 public class Hooks {
 
     //import from io.cucumber.java not from Junit
-    @Before
+    //@Before
     public void setupScenario(){
         System.out.println("=====Setting up browser using Cucumber @Before");
     }
 
-    @Before ("@login")
+    //@Before ("@login")
     public void setupScenarioForLogins(){
         System.out.println("=====Setting up browser using Cucumber @Before");
     }
 
-    @Before ("@db")
+    //@Before ("@db")
     public void setupForDatabaseScenarios(){
         System.out.println("=====Setting up browser using Cucumber @Before");
     }
 
-    @After
+    //@After
     public void tearDownScenario(){
         System.out.println("=====Closing browser using cucumber @After");
         System.out.println("=====Scenario ended/ Take screenshot is failed!");
     }
 
-    @BeforeStep
+    //@BeforeStep
     public void setupStep(){
         System.out.println("-------------------applying setup using @BeforeStep");
     }
 
-    @AfterStep
+    //@AfterStep
     public void afterStep(){
         System.out.println("-------------------->applying teardown using @AfterSetup");
     }

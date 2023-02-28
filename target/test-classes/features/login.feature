@@ -1,4 +1,4 @@
-@Regression @Smoke
+@Regression @Smoke @login
 Feature: Library app login feature
   As a user, I should be able to login with correct credentials to different accounts. And
   dashboard should be displayed.
