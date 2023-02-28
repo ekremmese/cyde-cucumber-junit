@@ -13,10 +13,7 @@ public class GoogleStepDefinitions {
 
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
-    @When("user type apple and clicks enter")
-    public void user_type_and_clicks_enter2() {
-        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
-    }
+
 
 
     @When("user type {string} and clicks enter")

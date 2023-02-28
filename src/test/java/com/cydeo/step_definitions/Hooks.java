@@ -9,6 +9,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import javax.swing.*;
 
@@ -32,6 +34,8 @@ public class Hooks {
 
     @After
     public void tearDownScenario(){
+
+        byte[] screenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 
         Driver.getDriver().close();
         //System.out.println("=====Closing browser using cucumber @After");
