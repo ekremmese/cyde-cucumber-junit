@@ -13,18 +13,18 @@ public class GoogleStepDefinitions {
 
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
-    @When("user type {word} and clicks enter")
-    public void user_type_and_clicks_enter2(String searchKeyword) {
-        googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
+    @When("user type apple and clicks enter")
+    public void user_type_and_clicks_enter2() {
+        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
     }
 
-/*
+
     @When("user type {string} and clicks enter")
     public void user_type_and_clicks_enter(String searchKeyword) {
         googleSearchPage.searchBox.sendKeys(searchKeyword + Keys.ENTER);
     }
 
- */
+
 
     @Then("user sees {string} in the google title")
     public void user_sees_in_the_google_title(String searchKeyword) {
@@ -49,13 +49,13 @@ public class GoogleStepDefinitions {
 
     }
 
-/*    @When("user type apple and clicks enter")
+   @When("user type apple and clicks enter")
     public void userTypeAppleAndClicksEnter() {
 
         googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
     }
 
- */
+
 
     @Then("user sees apple in the google title")
     public void userSeesAppleInTheGoogleTitle() {
@@ -71,3 +71,5 @@ public class GoogleStepDefinitions {
 //2. User types apple in the google search box and clicks enter
 //3. User sees Steve Jobs is in the google title
 //Note: Follow POM
+
+//1:59:58
