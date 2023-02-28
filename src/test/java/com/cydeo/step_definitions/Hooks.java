@@ -14,50 +14,44 @@ import javax.swing.*;
 public class Hooks {
 
     //import from io.cucumber.java not from Junit
-    //@Before
-    public void setupScenario(){
-        System.out.println("=====Setting up browser using Cucumber @Before");
+    @Before
+    public void setupScenario() {
+        Driver.getDriver().get("https://www.wikipedia.org");
     }
 
     //@Before ("@login")
-    public void setupScenarioForLogins(){
+    public void setupScenarioForLogins() {
         System.out.println("=====Setting up browser using Cucumber @Before");
     }
 
     //@Before ("@db")
-    public void setupForDatabaseScenarios(){
+    public void setupForDatabaseScenarios() {
         System.out.println("=====Setting up browser using Cucumber @Before");
     }
 
     @After
-    public void tearDownScenario(Scenario scenario){
+    public void tearDownScenario(Scenario scenario) {
 
         //scenario.isFailed()-> if scenario fails this method will return TRUE boolean value
-        if(scenario.isFailed()){
+        if (scenario.isFailed()) {
             byte[] screenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenShot, "image/png" , scenario.getName() );
+            scenario.attach(screenShot, "image/png", scenario.getName());
         }
 
-
-
-
-
-        Driver.getDriver().close();
+        //Driver.getDriver().close();
         //System.out.println("=====Closing browser using cucumber @After");
         //System.out.println("=====Scenario ended/ Take screenshot is failed!");
     }
 
     //@BeforeStep
-    public void setupStep(){
+    public void setupStep() {
         System.out.println("-------------------applying setup using @BeforeStep");
     }
 
     //@AfterStep
-    public void afterStep(){
+    public void afterStep() {
         System.out.println("-------------------->applying teardown using @AfterSetup");
     }
-
-
 
 
 }
