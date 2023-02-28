@@ -9,7 +9,7 @@ Feature: Library app login feature
 
     Given user is on the library login page
 
-  @librarian @employee @wip
+  @librarian @employee
   Scenario: Login as librarian
     When user enters librarian username
     And user enters librarian password
