@@ -14,7 +14,7 @@ import javax.swing.*;
 public class Hooks {
 
     //import from io.cucumber.java not from Junit
-    @Before
+    //@Before
     public void setupScenario() {
         Driver.getDriver().get("https://www.wikipedia.org");
     }
