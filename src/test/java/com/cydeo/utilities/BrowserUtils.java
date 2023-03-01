@@ -64,7 +64,16 @@ This method accepts 3 arguments
         Assert.assertEquals(expectedTitle,actualTitle);
     }
 
-    /*
+    /**
+    This method will verify if the current URL contains expected value
+     */
+    public static void verifyURLContains(String expectedInURL){
+        String actualTitle = Driver.getDriver().getCurrentUrl();
+        Assert.assertTrue(actualTitle.contains(expectedInURL));
+    }
+
+
+    /**
     wait for invisibility
      */
 
