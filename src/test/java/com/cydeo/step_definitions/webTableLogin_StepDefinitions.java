@@ -9,6 +9,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.Map;
+
 public class webTableLogin_StepDefinitions {
 
     WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
@@ -43,6 +45,18 @@ public class webTableLogin_StepDefinitions {
     @When("user enters username {string} password {string} and logins")
     public void user_enters_username_password_and_logins(String string, String string2) {
         webTableLoginPage.WebTableLoginFunction(string,string2);
+    }
+
+    @When("User enters below credentials")
+    public void user_enters_below_credentials(Map<String,String> credentials) {
+
+       // webTableLoginPage.inputBoxUserName.sendKeys(credentials.get("username"));
+        //webTableLoginPage.inputBoxPassword.sendKeys(credentials.get("password"));
+        //webTableLoginPage.loginButton.click();
+
+        webTableLoginPage.WebTableLoginFunction(credentials.get("username"),credentials.get("password"));
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
+
     }
 
 }
