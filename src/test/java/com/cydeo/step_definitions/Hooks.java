@@ -16,8 +16,7 @@ public class Hooks {
     //import from io.cucumber.java not from Junit
     //@Before
     public void setupScenario() {
-        Driver.getDriver().get("https://www.wikipedia.org");
-    }
+        System.out.println("---------Before Scenario is working-----------");    }
 
     //@Before ("@login")
     public void setupScenarioForLogins() {
