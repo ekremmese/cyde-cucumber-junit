@@ -4,8 +4,11 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -82,6 +85,30 @@ This method accepts 3 arguments
         Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
         wait.until(ExpectedConditions.invisibilityOf(webElement));
+
+    }
+
+    /**
+     * This method will accept a dropdown as a WebElement
+     * and return all the options' text in a List of String
+     * @param dropdownElement
+     * @return List<String> actualOptionsAsString
+     */
+    public static List<String> dropdownOptionsAsString(WebElement dropdownElement){
+
+        Select monthDropDown = new Select(dropdownElement);
+
+        //All month options as web element list
+        List<WebElement> actualOptionsAsWebElement = monthDropDown.getOptions();
+
+        //All month options as a string list
+        List<String> actualOptionsAsString = new ArrayList<>();
+
+        for (WebElement each : actualOptionsAsWebElement) {
+            actualOptionsAsString.add(each.getText());
+        }
+
+        return actualOptionsAsString;
 
     }
 
