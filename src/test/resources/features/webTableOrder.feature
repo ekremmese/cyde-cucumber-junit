@@ -45,7 +45,7 @@ Feature: Web table order feature
     @maleScientist
     Examples: Famous male scientists
       | productType | quantity | customerName          | street    | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName          |
-      | MoneyCog    | 2        | Charles Darwin        | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Charles Darwin        |
+      | MoneyCog    | 2        | Charles Darwin        | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Charles Darwins        |
       | Familybea   | 3        | Albert Einstein       | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Albert Einstein       |
       | Screenable  | 4        | CV Raman              | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | CV Raman              |
       | MoneyCog    | 5        | Galileo               | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Galileo               |
