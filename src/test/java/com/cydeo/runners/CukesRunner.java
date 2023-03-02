@@ -7,10 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"html:target/cucumber-reports",
-                    "rerun:target/rerun.txt"
+                "rerun:target/rerun.txt",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
-        glue="com/cydeo/step_definitions",
+        glue = "com/cydeo/step_definitions",
         dryRun = false,
         tags = "@maleScientist"
 )
