@@ -1,4 +1,4 @@
-package com.cydeo.runners;
+package com.cydeo.pages;
 
 import com.cydeo.pages.BasePage;
 import com.cydeo.utilities.Driver;
